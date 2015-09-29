@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.post('/', function(req, res){
 	var ran = Math.floor(Math.random()*lyrics.length);
 	res.send(lyrics[ran]);
